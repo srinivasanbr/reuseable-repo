@@ -17,6 +17,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+
       - name: Print secret value and additional message
         run: |
           ls -l
