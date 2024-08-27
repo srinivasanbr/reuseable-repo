@@ -1,6 +1,7 @@
 name: Print Secret Value
 
-on: [workflow_call]
+on: 
+  workflow_call:
     inputs:
       secret_name:
         description: 'The name of the secret to print'
