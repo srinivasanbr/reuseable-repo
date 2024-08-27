@@ -1,15 +1,15 @@
 name: Print Secret Value
 
 on: [workflow_call]
-    # inputs:
-    #   secret_name:
-    #     description: 'The name of the secret to print'
-    #     required: true
-    #     type: string
-    #   additional_message:
-    #     description: 'An additional message to print'
-    #     required: true
-    #     type: string
+    inputs:
+      secret_name:
+        description: 'The name of the secret to print'
+        required: true
+        type: string
+      additional_message:
+        description: 'An additional message to print'
+        required: true
+        type: string
 
 jobs:
   print-secret:
@@ -19,6 +19,6 @@ jobs:
       - name: Print secret value and additional message
         run: |
           ls -l
-          # SECRET_VALUE="${{ secrets[inputs.secret_name] }}"
-          # echo "The value of the secret is: $SECRET_VALUE"
-          # echo "Additional message: ${{ inputs.additional_message }}"
+          SECRET_VALUE="${{ secrets[inputs.secret_name] }}"
+          echo "The value of the secret is: $SECRET_VALUE"
+          echo "Additional message: ${{ inputs.additional_message }}"
