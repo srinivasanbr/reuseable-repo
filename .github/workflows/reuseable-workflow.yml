@@ -19,6 +19,7 @@ jobs:
     steps:
       - name: Print secret value and additional message
         run: |
+          ls -l
           SECRET_VALUE="${{ secrets[inputs.secret_name] }}"
           echo "The value of the secret is: $SECRET_VALUE"
           echo "Additional message: ${{ inputs.additional_message }}"
